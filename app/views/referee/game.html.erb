@@ -1,0 +1,17 @@
+<h1>Referee#game</h1>
+<p>Find me in app/views/referee/game.html.erb</p>
+
+<p><%= @newgrid.join(" ") %></p>
+
+
+<form action="<%= score_path %>" method="GET">
+  <label for="question">What is your attempt?</label>
+  <input type="text" name="attempt" placeholder="Size">
+  <input type="hidden" name="grid" value="<%= @newgrid.join("") %>">
+
+  <input type="hidden" name="start_time" value="<%= Time.now %>">
+
+  <input type="submit" value="Go on!">
+</form>
+
+
